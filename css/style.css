@@ -1,0 +1,175 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+}
+*::selection{
+    color: black;
+    background-color: white;
+  }
+
+body {
+    color: white;
+    /* background: linear-gradient(to right, #682c0adc, #e9bf65, #24180a); */
+    background: linear-gradient(to right, #363636, #7e7d7b, #222120);
+
+}
+
+main {
+    background-image: url();
+    /* Define a imagem de fundo */
+    background-size: cover;
+    /* Faz a imagem cobrir todo o fundo */
+    background-repeat: no-repeat;
+    /* Impede que a imagem se repita */
+    background-position: center;
+    /* Centraliza a imagem no fundo */
+    color: transparent;
+}
+
+#link,
+#link_botao {
+    text-decoration: none;
+    font-style: none;
+    color: rgb(231, 231, 231);
+}
+
+#link_botao {
+    color: black;
+}
+
+#img {
+    position: relative;
+    display: flex;
+    max-width: 1920px;
+    width: 100px;
+    right: 400px;
+}
+
+.menu {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 25px;
+    padding: 0;
+    /* border: solid 1px blue; */
+
+}
+
+.itemMenu,
+.botao,
+.botao_perfil {
+    font-size: 16px;
+    border-radius: 25px;
+    position: relative;
+    display: flex;
+    /* border: solid 1px red; */
+    padding: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-top: 0;
+    margin-left: 20px;
+
+}
+
+#link:hover {
+    color: white;
+    cursor: pointer;
+}
+
+.botao,
+.botao_perfil {
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+    font-weight: bold;
+    list-style-type: none;
+    cursor: pointer;
+    /* background-color: rgb(192, 192, 192); */
+    background-color: hwb(46 40% 0% / 0.863);
+    position: relative;
+    left: 400px;
+    font-size: 18px;
+    transition: transform 0.3s ease;
+    color: black;
+    background: linear-gradient(to right, #dab94c, #df880f, #d6b549);
+    /* background: linear-gradient(to right, #363636, #6b6a68, #222120); */
+
+
+}
+
+.botao:hover,
+.botao_perfil:hover {
+    color: black;
+    background-color: hsl(0, 0%, 71%);
+    transform: scale(1.07);
+}
+
+.container{
+    max-width: 1920px;
+    position: relative;
+
+    
+}
+
+.container_perfil {
+    font-size: 20px;
+    position: relative;
+    max-width: 1920px;
+    width: 1000px;
+    height: 400px;
+    left: 8%;
+    top: 100px;
+    /* border: 1px solid blue; */
+    padding: 20px;
+
+}
+
+.titulo {
+    /* border: 1px solid green; */
+
+}
+
+.descricao {
+
+    /* border: 1px solid pink; */
+    margin-top: 30px;
+
+}
+
+.botao_perfil {
+    margin-top: 20px;
+    left: -20px;
+    position: relative;
+    top: 20px;
+    /* border: 1px solid pink; */
+    width: 201px;
+
+}
+
+#img_perfil {
+    position: relative;
+    max-width: 1920px;
+    width: 400px;
+    left: 65%;
+    bottom: 350px;
+    border-radius: 50%;
+    box-shadow: rgba(0, 0, 0, 0.1) 5px 0px 20px 25px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-08px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+
+}
