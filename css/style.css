@@ -5,10 +5,11 @@
     font-family: 'Poppins', sans-serif;
     color: white;
 }
-*::selection{
+
+*::selection {
     color: black;
     background-color: white;
-  }
+}
 
 body {
     color: white;
@@ -100,15 +101,19 @@ main {
 }
 
 .botao:hover,
-.botao_perfil:hover {
+.botao_perfil:hover,
+.botao_social:hover,
+.btn-enviar input:hover {
     color: black;
     background-color: hsl(0, 0%, 71%);
     transform: scale(1.07);
 }
 
-.container{
+/* ---------- SOBRE ------------ */
+
+.container {
     max-width: 1920px;
-    position: relative;
+    /* position: relative; */
     /* border: 1px solid red; */
     /* MECHER NO DISPLAY  */
 }
@@ -123,16 +128,17 @@ main {
     top: 100px;
     /* border: 1px solid blue; */
     padding: 20px;
-    
+
+
 
 }
 
 .titulo {
     /* border: 1px solid green; */
-    background: linear-gradient(to top, #df880f,  #cf8b2b, #f7cf4f, #ad7322, #df880f);
-            -webkit-background-clip: text;
-            color: transparent;
-    
+    background: linear-gradient(to top, #df880f, #cf8b2b, #f7cf4f, #ad7322, #df880f);
+    -webkit-background-clip: text;
+    color: transparent;
+
 }
 
 .descricao {
@@ -141,15 +147,55 @@ main {
 
 }
 
-.botao_perfil {
+.btn_sociais {
+    /* border: 1px solid blue; */
+    gap: 20px;
+    position: relative;
+    display: flex;
+    margin: 0;
+    top: 60px;
+
+}
+
+.botao_social {
+    /* box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px; */
+    font-weight: bold;
+    list-style-type: none;
+    cursor: pointer;
+    position: relative;
+    left: 400px;
+    font-size: 18px;
+    transition: transform 0.3s ease;
+    color: black;
+    /* background-color: grey; */
+    background: linear-gradient(to right, #dab94c, #df880f, #d6b549);
+    padding: 5px;
+    border-radius: 40%;
+    /* border: 1px solid red; */
+    justify-content: flex-start;
+
+}
+
+#github,
+#linkedin,
+#instagram {
+    max-width: 1920px;
+    width: 60px;
+    /* border: 1px solid green; */
+    position: relative;
+    left: 0;
+
+}
+
+/* .botao_perfil {
     margin-top: 20px;
     left: -20px;
     position: relative;
     top: 30px;
-    /* border: 1px solid pink; */
+    border: 1px solid red;
     width: 201px;
 
-}
+} */
 
 #img_perfil {
     position: relative;
@@ -179,39 +225,49 @@ main {
 
 }
 
-.container_tech{
+/* ------------ TECNOLOGIAS --------- */
+.container_tech {
     /* border: 1px solid blue; */
     position: relative;
     bottom: 270px;
     padding: 50px;
 }
-.container_titulo{
+
+.container_titulo {
     text-align: center;
     /* border: 1px solid black; */
     padding: 80px;
+
+
 }
 
-.titulo_card{
+.titulo_card {
     /* border: 1px solid white; */
     display: inline;
     justify-content: center;
     max-width: 200px;
     font-size: 40px;
     margin-left: 10px;
-
-}
-#h1_stack{
-    color: white
+    text-shadow: rgba(0, 0, 0, 0.1) 20px 20px 32px 27px, rgba(0, 0, 0, 0.06) 0px 2px 5px -1px;
 
 }
 
-#h1_des{
-    background: linear-gradient(to top, #df880f,  #cf8b2b, #f7cf4f, #ad7322, #df880f);
+#h1_stack {
+    background: linear-gradient(to top, #131312, #5a5958, #f0e7e7, #696865, #0e0d0d);
     -webkit-background-clip: text;
     color: transparent;
+
 }
 
-.container_card{
+
+#h1_des {
+    background: linear-gradient(to top, #df880f, #cf8b2b, #f7cf4f, #ad7322, #df880f);
+    -webkit-background-clip: text;
+    color: transparent;
+
+}
+
+.container_card {
     /* border: 1px solid green; */
     margin: 5px;
     display: flex;
@@ -221,7 +277,7 @@ main {
     gap: 20px;
 }
 
-.card{
+.card {
     background: linear-gradient(to top, #2c2c2b, #4d4a47, #858484, #3d3c39, #2c2b2b);
     /* border: 1px solid red; */
     margin: 10px;
@@ -232,39 +288,103 @@ main {
     max-width: 1920px;
     width: 400px;
     border-radius: 30px;
-    
-    
+
+
 }
-.card:hover{
+
+.card:hover {
     transform: scale(1.1);
 }
 
-#python, #sql, #html, #css, #git{
+#python,
+#sql,
+#html,
+#css,
+#git {
     padding-top: 20px;
     max-width: 1920px;
     width: 150px;
     /* border: 1px solid yellow; */
-    
+
 }
-#p_titulo{
+
+#p_titulo {
     padding-top: 20px;
     /* margin: 15px; */
 }
 
-#python{
-    
+#python {}
 
-}
-#sql{
+#sql {
     width: 157px;
 }
-#html{
+
+#html {
     width: 138.5px;
 }
-#css{
+
+#css {
     width: 137px;
 }
 
-#git{
+#git {}
+
+/* --------- FORMULARIO --------- */
+.formulario {
+    padding: 80px 4%;
+    position: relative;
+    bottom: 250px;
+    /* border: 1px solid red; */
+}
+
+.container_formulario {}
+
+form {
+    max-width: 500px;
+    border-radius: 30px;
+    box-shadow: rgba(0, 0, 0, 0.1) 5px 10px 11px 7px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+    background: linear-gradient(to right, #222221, #363533, #3b3939, #302f2e, #242323);
+    text-align: center;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px;
+    gap: 10px;
 
 }
+
+input,
+textarea {
+    width: 100%;
+    border: 0;
+    outline: 0;
+    padding: 20px 15px;
+    background-color: rgba(128, 128, 128, 0.411);
+    border-radius: 15px;
+    color: #fff;
+    font-size: 18px;
+}
+
+textarea {
+    resize: none;
+    max-height: 200px;
+
+}
+
+.btn-enviar {
+    margin-top: 20px;
+}
+
+.btn-enviar input {
+    width: 120px;
+    background: linear-gradient(to right, #dab94c, #df880f, #d6b549);
+    color: black;
+    font-weight: 700;
+    cursor: pointer;
+    transition: .2s;
+}
+
+/* ------- rodapé --------- */
+
+footer {}
