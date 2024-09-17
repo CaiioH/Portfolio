@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
@@ -14,36 +14,65 @@
         rel="stylesheet">
     <!-- -- FIM GOOGLE FONTS -- -->
 
-
+<script src="menu.js" defer></script>
 </head>
 
 <body>
     <!-- MENU   -->
-    <header>
-        <nav>
+    <header id="inicio">
+        <nav class="menu_nav">
+            <img id="img" src="./img/logo (1).png" alt="Logo">
             <ul class="menu">
-                <img id="img" src="./img/logo (1).png" alt="Logo">
-                <li class="itemMenu"><a id="link" href="">Inicio</a></li>
-                <li class="itemMenu"><a id="link" href="">Tecnologias</a></li>
-                <li class="itemMenu"><a id="link" href="./sobre.html">Sobre</a></li>
-                <li class="itemMenu"><a id="link" href="./projetos.html">Projetos</a></li>
-                <li class="botao"><a id="link_botao" href="./contato.html" target="_blank">📧 CONTATO</a></li>
+                <li class="itemMenu"><a id="link" href="#inicio">Inicio</a></li>
+                <li class="itemMenu"><a id="link" href="#sobre">Sobre</a></li>
+                <li class="itemMenu"><a id="link" href="#tech">Tecnologias</a></li>
+                <li class="itemMenu"><a id="link" href="https://github.com/CaiioH?tab=repositories "
+                        target="_blank">Projetos</a></li>
             </ul>
+            <div class="botao">
+                <a id="link_botao" href="#formulario">📧 CONTATO</a>
+            </div>
         </nav>
+
+        <!-- MENU MOBILE -->
+        <div class="btn_abrir" id="btn-menu">
+            <i class="abrir">Ξ</i>
+        </div>
+
+        <div class="menu_mobile" id="menu-mobile">
+            <div class="btn_fechar">
+                <i>✖</i>
+            </div>
+
+            <nav>
+                <ul>
+                    <li class="itemMenu-mobile"><a id="link-mobile" href="#inicio">Inicio</a></li>
+                    <li class="itemMenu-mobile"><a id="link-mobile" href="#sobre">Sobre</a></li>
+                    <li class="itemMenu-mobile"><a id="link-mobile" href="#tech">Tecnologias</a></li>
+                    <li class="itemMenu-mobile"><a id="link-mobile" href="https://github.com/CaiioH?tab=repositories "
+                            target="_blank">Projetos</a></li>
+                </ul>
+            </nav>
+            <div class="btn_Menu-mobile">
+                <a id="link_botao-mobile" href="#formulario">📧 CONTATO</a></li>
+            </div>
+        </div>
+        <div class="overlay-menu" id="overlay-menu"></div>
+
     </header>
     <!-- FIM DO MENU  -->
 
     <!-- MAIN  -->
     <main>
-        <div class="container">
+        <div id="sobre" class="container">
             <div class="container_perfil">
                 <h1 class="titulo">Caio Roberto Henrique Costa</h1>
                 <h3 class="descricao"> 25 anos, estudante de Análise e Desenvolvimento de Sistemas, buscando
-                    aperfeiçoamento contínuo na área de tecnologia. Com foco no desenvolvimento back-end, tem paixão por
+                    aperfeiçoamento contínuo na área de tecnologia. Com foco no desenvolvimento back-end, tem paixão
+                    por
                     resolver problemas e criar soluções eficientes. Determinado a construir uma carreira sólida em
                     programação.
                 </h3>
-
                 <!-- botões  -->
                 <div class="btn_sociais">
                     <a id="link" href="https://github.com/CaiioH" target="_blank"> <img class="botao_social" id="github"
@@ -52,78 +81,99 @@
                             class="botao_social" id="linkedin" src="./img/linkedin.png" alt="Linkedin"></a>
                     <a id="link" href="https://www.instagram.com/caioo.r/" target="_blank"> <img class="botao_social"
                             id="instagram" src="./img/instagram.webp" alt="Instagram"></a>
+
                 </div>
-
-                <!-- <div class="botao_perfil">
-                    <a id="link_botao" href="./contato.html" target="_blank">Entre em contato</a>
-                </div> -->
-
             </div>
             <img id="img_perfil" src="./img/euu.jpg" alt="Perfil">
         </div>
 
-        <section class="container_tech">
-            <div>
+        <section id="tech" class="tech">
+            <div class="container_tech">
                 <div class="container_titulo">
-                    <h1 class="titulo_card" id="h1_stack">STACK DE</h1>
-                    <h1 class="titulo_card" id="h1_des">DESENVOLVIMENTO</h1>
+                    <h1 class="titulo_card" id="h1_stack">TECH <span id="h1_des"> SKILLS</span></h1>
                 </div>
                 <ul class="container_card">
 
                     <!-- HTML  -->
-                    <li class="card"><img id="html" src="./img/html.png">
-                        <p id="p_titulo">Sei estruturar páginas com HTML, usando tags semânticas, formulários e tabelas.
-                            Utilizo boas
-                            práticas para criar a base de layouts
-                            funcionais, facilitando o desenvolvimento de interfaces.</p>
-                    </li>
+                    <div class="card">
+                        <li class="conteudo_card">
+                            <div class="logo_card">
+                                <img id="html" src="./img/html.png">
+                            </div>
+                            <p id="p_titulo">Sei estruturar páginas com HTML, usando tags semânticas, formulários e
+                                tabelas.
+                                Utilizo boas
+                                práticas para criar a base de layouts
+                                funcionais, facilitando o desenvolvimento de interfaces.</p>
+
+                        </li>
+                    </div>
 
                     <!-- CSS  -->
-                    <li class="card"><img id="css" src="./img/css.png">
-                        <p id="p_titulo">Base sólida em CSS para estilização de layouts responsivos, gradientes,
-                            transições e
-                            animações. Também crio e personalizo elementos interativos, como botões e links, sempre
-                            aprimorando para interfaces mais funcionais e atraentes.</p>
-                    </li>
-
+                    <div class="card">
+                        <li class="conteudo_card">
+                            <div class="logo_card">
+                                <img id="css" src="./img/css.png">
+                            </div>
+                            <p id="p_titulo">Base sólida em CSS para estilização de layouts responsivos, gradientes,
+                                transições e
+                                animações. Também crio e personalizo elementos interativos, como botões e links, sempre
+                                aprimorando para interfaces mais funcionais e atraentes.</p>
+                        </li>
+                    </div>
                     <!-- python  -->
-                    <li class="card"><img id="python" src="./img/python.png">
-                        <p id="p_titulo">Conhecimento sólido em Python, focado no back-end. Experiência com projetos
-                            envolvendo manipulação de dados, automação de tarefas e programação orientada a
-                            objetos (POO), usando estruturas de dados como listas e dicionários. Nível intermediário, e
-                            buscando sempre melhorar.</p>
-                    </li>
-
+                    <div class="card">
+                        <li class="conteudo_card">
+                            <div class="logo_card">
+                                <img id="python" src="./img/python.png">
+                            </div>
+                            <p id="p_titulo">Conhecimento sólido em Python, focado no back-end. Experiência com projetos
+                                envolvendo manipulação de dados, automação de tarefas e programação orientada a
+                                objetos (POO), usando estruturas de dados como listas e dicionários. Nível
+                                intermediário, e
+                                buscando sempre melhorar.</p>
+                        </li>
+                    </div>
                     <!-- SQL  -->
-                    <li class="card"><img id="sql" src="./img/sql.png">
-                        <p id="p_titulo">Conhecimento básico de SQL, capaz de fazer consultas, filtrar dados, usar
-                            funções agregadas,
-                            JOINs e variáveis. Estou aprimorando meu entendimento de bancos de dados relacionais.</p>
-                    </li>
-
+                    <div class="card">
+                        <li class="conteudo_card">
+                            <div class="logo_card">
+                                <img id="sql" src="./img/sql.png">
+                            </div>
+                            <p id="p_titulo">Conhecimento básico de SQL, capaz de fazer consultas, filtrar dados, usar
+                                funções agregadas,
+                                JOINs e variáveis. Estou aprimorando meu entendimento de bancos de dados relacionais.
+                            </p>
+                        </li>
+                    </div>
                     <!-- GIT  -->
-                    <li class="card"><img id="git" src="./img/git.png">
-                        <p id="p_titulo">Tenho experiência intermediária em Git, utilizando-o para controle de versão em
-                            projetos.
-                            Conheço comandos como clone, commit, push, pull e branch, além de saber como trabalhar com
-                            repositórios remotos como GitHub.</p>
-                    </li>
+                    <div class="card">
+                        <li class="conteudo_card">
+                            <div class="logo_card">
+                                <img id="git" src="./img/git.png">
+                            </div>
+                            <p id="p_titulo">Tenho experiência intermediária em Git, utilizando-o para controle de
+                                versão em
+                                projetos.
+                                Conheço comandos como clone, commit, push, pull e branch, além de saber como trabalhar
+                                com
+                                repositórios remotos como GitHub.</p>
+                        </li>
                 </ul>
             </div>
 
         </section>
 
         <!-- PROJETOS  -->
-        <section class="projetos">
+        <section id="projetos" class="projetos">
             <div class="container_projetos">
             </div>
         </section>
 
-        <section class="formulario">
+        <section id="formulario" class="formulario">
             <div class="container_formulario">
                 <div class="container_titulo">
-                    <h1 class="titulo_card" id="h1_stack">FALE</h1>
-                    <h1 class="titulo_card" id="h1_des">COMIGO:</h1>
+                    <h1 class="titulo_card" id="h1_stack">FALE <span id="h1_des">COMIGO</span></h1>
                 </div>
                 <form action="">
                     <input type="text" name="" id="" placeholder="Nome completo:" required>
@@ -140,9 +190,43 @@
 
     <!-- RODAPÉ -->
     <footer>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit debitis, maxime ex in veniam reprehenderit
-            impedit ratione, quos excepturi quae tempore ullam voluptatibus quod inventore officia at rerum quidem
-            atque!</p>
+        <div class="container_footer">
+            <div class="conteudo_footer">
+                <div class="line_footer">
+                    <div class="sociais_footer">
+                        <a id="link" href="https://github.com/CaiioH" target="_blank"> <img class="botao_social_footer"
+                                id="github_footer" src="./img/github.png" alt="GitHub"></a>
+                        <a id="link" href="https://www.linkedin.com/in/caiorhenrique/" target="_blank"> <img
+                                class="botao_social_footer" id="linkedin_footer" src="./img/linkedin.png"
+                                alt="Linkedin"></a>
+                        <a id="link" href="https://www.instagram.com/caioo.r/" target="_blank"> <img
+                                class="botao_social_footer" id="instagram_footer" src="./img/instagram.webp"
+                                alt="Instagram"></a>
+                    </div>
+                </div>
+                <br>
+                <div class="line_footer3">
+                    <a id="link" href="#inicio">Voltar ao Topo ↑</a>
+                </div>
+                <div class="linha">
+                    <p></p>
+                </div>
+                <br>
+                <div class="line_footer2">
+
+                    <img id="img_footer" src="./img/logo (1).png" alt="Logo">
+                    <p id="pCaio">❮❯ by <a id="caioh" href="https://github.com/CaiioH?tab=repositories"
+                            target="_blank">Caio
+                            Henrique</a> 2024</p>
+                    <p class="email">📧 <a id="link"
+                            href="mailto:caio.rhenrique@hotmail.com">caio.rhenrique@hotmail.com</a>
+                    </p>
+
+
+                </div>
+            </div>
+        </div>
+
     </footer>
     <!-- FIM RODAPÉ -->
 
